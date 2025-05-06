@@ -4,11 +4,11 @@
 🚀 Introduction
 A college website is a central hub for sharing information, news, and resources with students, staff, and the community. This project aims to design and develop a user-friendly website that:
 
-Showcases the college’s departments and programs
+* Showcases the college’s departments and programs
 
-Provides up-to-date announcements and events
++ Provides up-to-date announcements and events
 
-Offers details about admissions, faculty, and student life
+- Offers details about admissions, faculty, and student life
 
 Is accessible on all devices (mobile-friendly)
 
