@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Programs - Karl Marx University</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Link the external CSS -->
+    <link rel="stylesheet" href="programs.css">
+</head>
+<body>
+    <header class="programs-header">
+        <h1 class="header-title">Academic Programs</h1>
+        <p>Shape Your Future with Industry-Relevant Education</p>
+    </header>
+
+    <section class="filter-section">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Programs</button>
+            <button class="filter-btn" data-filter="ug">Undergraduate</button>
+            <button class="filter-btn" data-filter="pg">Postgraduate</button>
+            <button class="filter-btn" data-filter="diploma">Diploma</button>
+        </div>
+    </section>
+
+    <div class="programs-grid">
+        <!-- B.Tech Card -->
+        <div class="program-card" data-category="ug">
+            <div class="card-content">
+                <span class="program-duration">4 Years</span>
+                <h3 class="program-title">B.Tech Computer Science</h3>
+                <ul class="program-details">
+                    <li><i class="fas fa-rupee-sign"></i> Fees: ₹1,20,000/year</li>
+                    <li><i class="fas fa-user-graduate"></i> Eligibility: 10+2 (75% PCM)</li>
+                    <li><i class="fas fa-star"></i> Specializations: AI, Cybersecurity</li>
+                </ul>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+        </div>
+
+        <!-- MBA Card -->
+        <div class="program-card" data-category="pg">
+            <div class="card-content">
+                <span class="program-duration">2 Years</span>
+                <h3 class="program-title">MBA Business Analytics</h3>
+                <ul class="program-details">
+                    <li><i class="fas fa-rupee-sign"></i> Fees: ₹2,50,000/year</li>
+                    <li><i class="fas fa-user-graduate"></i> Eligibility: Graduation (50%)</li>
+                    <li><i class="fas fa-star"></i> NBA Accredited Program</li>
+                </ul>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+        </div>
+
+        <!-- Diploma Card -->
+        <div class="program-card" data-category="diploma">
+            <div class="card-content">
+                <span class="program-duration">1 Year</span>
+                <h3 class="program-title">Diploma in Web Development</h3>
+                <ul class="program-details">
+                    <li><i class="fas fa-rupee-sign"></i> Fees: ₹40,000</li>
+                    <li><i class="fas fa-user-graduate"></i> Eligibility: 10th Pass</li>
+                    <li><i class="fas fa-star"></i> Practical Training Included</li>
+                </ul>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+        </div>
+
+        <!-- You can add more cards in a similar way -->
+    </div>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.program-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const programCards = document.querySelectorAll('.program-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.dataset.filter;
+
+                programCards.forEach(card => {
+                    const category = card.dataset.category;
+                    if(filter === 'all' || category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        programCards.forEach(card => {
+            card.addEventListener('click', () => {
+                card.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    card.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+    </script>
+
+    <!-- Add this right after <body> -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">
+            <img src="https://pnghq.com/wp-content/uploads/download-karl-marx-philosophy-capitalism-royalty-free-vector-graphic-png-1536x1536.png" alt="College Logo">
+            <span>Karl Marx University</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="programs.html" class="active">Programs</a></li>
+            <li><a href="admission.html">Admissions</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="campus.html">Campus</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Faculty</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="placements.html">Placements</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 123 College Road, Mumbai</p>
+            <p><i class="fas fa-phone"></i> +91 22 1234 5678</p>
+            <p><i class="fas fa-envelope"></i> info@Karlmarx.ac.in</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Karl Marx University. All rights reserved.</p>
+        <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+</footer>
+
+</body>
+</html>
+

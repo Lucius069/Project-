@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions</title>
+    <link rel="stylesheet" href="admission.css">
+</head>
+<body class="admission-page">
+    <!-- Navigation Bar -->
+    <header class="advanced-header">
+        <a href="index.html" class="logo-advanced" title="Go to Home">
+            <div class="logo-wrapper">
+                <img src="https://www.cambria.ac.uk/wp-content/uploads/2021/09/logo.svg" alt="Cambria College Logo" class="logo-svg">
+                <div class="logo-halo"></div>
+            </div>
+        </a>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="admission.html">Admissions</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Admission Section -->
+    <section class="admission-section">
+        <h2>Admission</h2>
+        <p>
+            Admissions for the academic year 2025 are now open! Apply now to join our vibrant community of learners and leaders.
+            Please fill out the form below or contact our admissions office for more information.
+        </p>
+        <div class="admission-info">
+            <ul>
+                <li>Eligibility: 10+2 or equivalent with minimum 50% marks</li>
+                <li>Application Deadline: 31st July 2025</li>
+                <li>Entrance Exam: 15th August 2025</li>
+                <li>Scholarships available for meritorious students</li>
+                <li>For queries, email: <a href="mailto:admissions@yourcollege.edu">admissions@yourcollege.edu</a></li>
+            </ul>
+        </div>
+        <form class="admission-form">
+            <h3>Apply Now</h3>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+    
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="program">Program Interested In:</label>
+            <select id="program" name="program" required>
+                <option value="">Select Program</option>
+                <option value="engineering">Engineering</option>
+                <option value="science">Science</option>
+                <option value="arts">Arts</option>
+                <option value="management">Management</option>
+                <option value="law">Law</option>
+                <option value="medicine">Medicine</option>
+                <option value="commerce">Commerce</option>
+                <option value="pharmacy">Pharmacy</option>
+                <option value="architecture">Architecture</option>
+                <option value="education">Education</option>
+                <option value="agriculture">Agriculture</option>
+                <option value="design">Design</option>
+                <option value="hotel-management">Hotel Management</option>
+            </select>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="3" placeholder="Your message (optional)"></textarea>
+    
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://www.cambria.ac.uk/wp-content/uploads/2021/09/logo.svg" alt="College Logo">
+                </div>
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="admission.html">Admissions</a></li>
+                            <li><a href="programs.html">Programs</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li>Email: <a href="mailto:admissions@yourcollege.edu">admissions@yourcollege.edu</a></li>
+                            <li>Phone: +1 (123) 456-7890</li>
+                            <li>Address: 123 College Street, City, State</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Your College Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
