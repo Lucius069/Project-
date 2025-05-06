@@ -10,6 +10,6 @@ A college website is a central hub for sharing information, news, and resources 
 
 - Offers details about admissions, faculty, and student life
 
-Is accessible on all devices (mobile-friendly)
++ Is accessible on all devices (mobile-friendly)
 
-Whether you’re a student, teacher, or web development enthusiast, you’re welcome to explore, contribute, or use this project as a learning resource!
++ Whether you’re a student, teacher, or web development enthusiast, you’re welcome to explore, contribute, or use this project as a learning resource!
