@@ -1,5 +1,6 @@
 # Project-College Website
-## Welcome to the College Website project! This repository contains the code and resources for building a modern, responsive website for a college. The goal is to create an easy-to-navigate platform where students, faculty, and visitors can find information about courses, events, admissions, and more.
+## Welcome to the College Website project! This repository contains the code and resources for building a modern, responsive website for a college. 
+### The goal is to create an easy-to-navigate platform where students, faculty, and visitors can find information about courses, events, admissions, and more.
 
 🚀 Introduction
 A college website is a central hub for sharing information, news, and resources with students, staff, and the community. 
