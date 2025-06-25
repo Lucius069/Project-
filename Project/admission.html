@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admissions</title>
     <link rel="stylesheet" href="admission.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body class="admission-page">
     <!-- Navigation Bar -->
     <header class="advanced-header">
         <a href="index.html" class="logo-advanced" title="Go to Home">
             <div class="logo-wrapper">
-                <img src="https://www.cambria.ac.uk/wp-content/uploads/2021/09/logo.svg" alt="Cambria College Logo" class="logo-svg">
+                <img src="resource/Karl marx1.png" alt="Cambria College Logo" class="logo-svg">
                 <div class="logo-halo"></div>
-            </div>
+<span class="logo-text">Karl Marx University</span>
+       </div>
         </a>
         <nav class="nav-bar">
             <ul class="nav-links">
@@ -81,7 +84,7 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="https://www.cambria.ac.uk/wp-content/uploads/2021/09/logo.svg" alt="College Logo">
+                    <img src="resource/Karl marx1.png" alt="Karl Marx University Logo">
                 </div>
                 <div class="footer-links">
                     <div class="link-column">
@@ -97,17 +100,66 @@
                     <div class="link-column">
                         <h3>Contact Us</h3>
                         <ul>
-                            <li>Email: <a href="mailto:admissions@yourcollege.edu">admissions@yourcollege.edu</a></li>
-                            <li>Phone: +1 (123) 456-7890</li>
-                            <li>Address: 123 College Street, City, State</li>
+                            <li>Email: <a href="mailto:admissions@karlmarxuniversity.edu">admissions@karlmarxuniversity.edu</a></li>
+                            <li>Phone: <a href="tel:+11234567890">+1 (123) 456-7890</a></li>
+                            <li><address>123 College Street, City, State</address></li>
                         </ul>
                     </div>
                 </div>
             </div>
+            
+            <!-- Optional: Newsletter subscription section -->
+            <div class="footer-newsletter">
+                <h3>Stay Connected</h3>
+                <p>Subscribe to receive the latest news, events & updates from Karl Marx University.</p>
+                <form class="newsletter-form" action="#" method="POST">
+                    <input type="email" 
+                           class="newsletter-input" 
+                           placeholder="Enter your email address" 
+                           required 
+                           aria-label="Email address for newsletter">
+                    <button type="submit" class="newsletter-button">Subscribe</button>
+                </form>
+            </div>
+            
+            <!-- Social media links section -->
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook" title="Follow us on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" aria-label="Twitter" title="Follow us on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" aria-label="Instagram" title="Follow us on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" aria-label="LinkedIn" title="Connect with us on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" aria-label="YouTube" title="Subscribe to our YouTube channel">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Your College Name. All rights reserved.</p>
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>&copy; 2025 Karl Marx University. All rights reserved.</p>
+                    </div>
+                    <nav class="footer-legal-links" aria-label="Legal links">
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="/terms-of-service">Terms of Service</a>
+                        <a href="/accessibility">Accessibility</a>
+                        <a href="/cookies">Cookie Policy</a>
+                    </nav>
+                </div>
             </div>
         </div>
+        
+        <!-- Back to top button -->
+        <button class="back-to-top" aria-label="Back to top" title="Back to top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
     </footer>
-</body>
+    </body>
 </html>
