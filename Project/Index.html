@@ -3,30 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> Karl Marx University - Home</title>
+  <title>Karl Marx University - Home</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="header-top">
-      <div class="logo">
-        <img src="resource/Karl marx.png" alt=" Karl Marx University Logo" />
-        <span class="logo-text">Karl Marx University</span> <!-- Added text next to the logo -->
-      </div>
+      <a href="index.html" class="logo">
+        <img src="resource/Karl marx.png" alt="Karl Marx University Logo" />
+        <span class="logo-text">Karl Marx University</span>
+      </a>
       <nav class="main-nav">
         <a href="about.html">About</a>
-        <a href="#">Schools</a>
-        <a href="#">Jobs</a>
-        <a href="#">Parents</a>
+        <a href="programs.html">Programs</a>
+        <a href="placements.html">Placements</a>
+        <a href="academics.html">Academics</a>
         <a href="#" class="btn staff">Staff Intranet</a>
         <a href="#" class="btn student">Student Hub</a>
       </nav>
     </div>
     <div class="header-links">
-      <a href="#">College 16-18</a>
       <a href="admission.html">Admissions</a>
-      <a href="#">Adult and Part-time</a>
       <a href="#">Employers</a>
       <a href="#">College Life</a>
     </div>
@@ -107,34 +106,44 @@
       </div>
     </div>
   </section>
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="footer-main">
-    <div class="footer-logo-container">
-      <img src="resource/Karl marx.png" alt=" Karl Marx University Logo" class="footer-logo" />
-      <p class="footer-logo-text">Karl Marx University</p>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="resource/Karl marx.png" alt="Karl Marx University Logo" class="footer-logo">
+          <p>Karl Marx University is dedicated to academic excellence and innovative research that addresses global challenges.</p>
+          <div class="social-icons">
+            <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="admission.html">Admissions</a></li>
+            <li><a href="placements.html">Placements</a></li>
+            <li><a href="#">Campus Life</a></li>
+            <li><a href="programs.html">Programs</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 123 University Avenue, New Delhi</p>
+          <p><i class="fas fa-phone"></i> +91 11 2345 6789</p>
+          <p><i class="fas fa-envelope"></i> info@techvision.edu.in</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Karl Marx University. All rights reserved.</span>
+      </div>
     </div>
-    <nav>
-      <a href="#">College 16-18</a>
-      <a href="#">University Center</a>
-      <a href="#">Apprenticeships</a>
-      <a href="#">Adult and Part-time</a>
-      <a href="#">Employers</a>
-      <a href="#">College Life</a>
-    </nav>
-    <div class="footer-social">
-      <a href="#"><i class="fas fa-globe"></i></a>
-      <a href="#"><i class="fas fa-dove"></i></a>
-      <a href="#"><i class="fas fa-mobile-alt"></i></a>
-      <a href="#"><i class="fas fa-camera"></i></a>
-      <a href="#"><i class="fas fa-briefcase"></i></a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 Karl Marx University</span>
-  </div>
-</footer>
-<script src="main.js"></script>
+  </footer>
+  <script src="main.js"></script>
 </body>
 </html>
 

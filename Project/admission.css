@@ -9,7 +9,7 @@
     --card-bg: #253447;             
     --surface-bg: #1e293b;          
     
-    --accent-blue: #874ae2;         
+    --accent-blue: #4aa0e2;         
     --accent-teal: #d42d91;         
     --accent-cyan: #b208a7;         
     --accent-indigo: #6366f1;       
@@ -640,37 +640,306 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
 }
 
-/* Social media integration (optional enhancement) */
+/* Footer Social Media Icons - Advanced & Responsive */
 .footer-socials {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
-    margin-top: 1.5rem;
+    align-items: center;
+    margin-top: 2.5rem;
     flex-wrap: wrap;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.footer-socials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    border-radius: 2px;
 }
 
 .footer-socials a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
-    color: var(--text-white);
-    text-decoration: none;
-    transition: var(--transition);
-    font-size: 1.25rem;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.4rem;
+    text-decoration: none !important;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Remove any underlines or pseudo-elements */
+.footer-socials a::before,
+.footer-socials a::after {
+    display: none !important;
+}
+
+.footer-socials a:link,
+.footer-socials a:visited,
+.footer-socials a:hover,
+.footer-socials a:active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    text-underline-offset: unset !important;
+    text-decoration-line: none !important;
+}
+
+/* Animated background layer */
+.footer-socials a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(0);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+    display: block !important;
+}
+
+/* Brand-specific hover colors - ONLY YouTube, Instagram, LinkedIn, Facebook */
+
+/* Facebook - #1877f2 */
+.footer-socials a[href*="facebook.com"]:hover,
+.footer-socials a[href*="fb.com"]:hover,
+.footer-socials a.facebook:hover {
+    background: linear-gradient(135deg, #1877f2 0%, #4267b2 100%);
+    color: #ffffff;
+    border-color: #1877f2;
+    transform: translateY(-6px) scale(1.12);
+    box-shadow: 0 12px 32px rgba(24, 119, 242, 0.4);
+}
+
+/* Instagram - Gradient */
+.footer-socials a[href*="instagram.com"]:hover,
+.footer-socials a.instagram:hover {
+    background: linear-gradient(135deg, #f56040 0%, #c32aa3 50%, #4c5fd7 100%);
+    color: #ffffff;
+    border-color: #f56040;
+    transform: translateY(-6px) scale(1.12);
+    box-shadow: 0 12px 32px rgba(245, 96, 64, 0.4);
+}
+
+/* YouTube - #ff0000 */
+.footer-socials a[href*="youtube.com"]:hover,
+.footer-socials a.youtube:hover {
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    color: #ffffff;
+    border-color: #ff0000;
+    transform: translateY(-6px) scale(1.12);
+    box-shadow: 0 12px 32px rgba(255, 0, 0, 0.4);
+}
+
+/* LinkedIn - #0a66c2 */
+.footer-socials a[href*="linkedin.com"]:hover,
+.footer-socials a.linkedin:hover {
+    background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+    color: #ffffff;
+    border-color: #0a66c2;
+    transform: translateY(-6px) scale(1.12);
+    box-shadow: 0 12px 32px rgba(10, 102, 194, 0.4);
+}
+
+/* Active/Click states */
+.footer-socials a:active {
+    transform: translateY(-2px) scale(0.98);
+    transition: transform 0.1s ease;
+}
+
+/* Hover background animation */
+.footer-socials a:hover::before {
+    transform: scale(1);
+}
+
+/* Floating animation */
+@keyframes float-social {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
 }
 
 .footer-socials a:hover {
-    background: var(--accent-blue);
-    border-color: var(--accent-blue);
-    transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(74, 158, 255, 0.4);
+    animation: float-social 2s ease-in-out infinite;
 }
+
+/* Glowing pulse effect */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 12px 32px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 12px 32px rgba(255, 255, 255, 0.3);
+    }
+}
+
+.footer-socials a:hover {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-socials {
+        gap: 1.2rem;
+        margin-top: 2rem;
+    }
+    
+    .footer-socials a {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-socials {
+        gap: 1rem;
+        margin-top: 1.5rem;
+        padding: 0.8rem 0;
+    }
+    
+    .footer-socials a {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
+    
+    .footer-socials a:hover {
+        transform: translateY(-4px) scale(1.08);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-socials {
+        gap: 0.8rem;
+        margin-top: 1.2rem;
+        padding: 0.6rem 0;
+    }
+    
+    .footer-socials a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    .footer-socials a:hover {
+        transform: translateY(-3px) scale(1.06);
+    }
+}
+
+@media (max-width: 360px) {
+    .footer-socials {
+        gap: 0.6rem;
+        margin-top: 1rem;
+    }
+    
+    .footer-socials a {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .footer-socials a {
+        border-width: 3px;
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .footer-socials a {
+        transition: none;
+    }
+    
+    .footer-socials a:hover {
+        animation: none;
+        transform: none;
+    }
+}
+
+/* Focus states for accessibility */
+.footer-socials a:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.6);
+    outline-offset: 4px;
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Touch device optimization */
+@media (hover: none) and (pointer: coarse) {
+    .footer-socials a:hover {
+        transform: none;
+        animation: none;
+    }
+    
+    .footer-socials a:active {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+    }
+}
+
+/* Print styles */
+@media print {
+    .footer-socials {
+        display: none;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .footer-socials a {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Staggered animation entrance - adjusted for 4 icons */
+.footer-socials a:nth-child(1) { animation-delay: 0.1s; }
+.footer-socials a:nth-child(2) { animation-delay: 0.2s; }
+.footer-socials a:nth-child(3) { animation-delay: 0.3s; }
+.footer-socials a:nth-child(4) { animation-delay: 0.4s; }
+
+/* Entrance animation */
+@keyframes socialEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.footer-socials a {
+    animation: socialEnter 0.6s ease-out forwards;
+}
+
+
 
 /* Responsive Design - Mobile First */
 @media (max-width: 1200px) {

@@ -256,5 +256,42 @@ document.addEventListener('DOMContentLoaded', function () {
       observer.observe(card);
     });
   });
-  
+ 
+  /* Scroll behavior JS (add to your main script) */
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.site-header');
+  if (window.scrollY > 50) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+});
+
+// Unified scroll event for .site-header
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.site-header');
+    if (header) {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    }
+});
+
+// Unified mobile menu toggle logic
+document.addEventListener('DOMContentLoaded', function () {
+    // Try all possible toggles and navs for compatibility
+    const toggles = [
+        document.querySelector('.menu-toggle'),
+        document.querySelector('.nav-toggle'),
+        document.querySelector('.mobile-toggle')
+    ].filter(Boolean);
+
+    const navs = [
+        document.querySelector('.main-nav'),
+        document.getElementById('navMenu'),
+        document.querySelector('.nav-links')
+    ].filter(Boolean);
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+            this.classList.toggle('active');
+            navs.forEach(nav => nav.classList.toggle('active'));
+        });
+    });
+});
 

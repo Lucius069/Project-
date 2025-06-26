@@ -135,3 +135,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    
+    // Scroll indicator
+    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    scrollIndicator.style.width = scrollPercent + '%';
+});
+
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', function() {
+    menuToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
